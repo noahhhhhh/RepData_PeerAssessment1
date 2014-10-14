@@ -105,6 +105,8 @@ Thus the total number of missing values is 2304.
 
 **2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.**
 
+The below strategy is to imput the null value by using the mean for that 5-minute interval
+
 ```r
 ## join (merge) dataStepsByInterval dataset with the original dataset
 dataMerge <- merge(dataActivity, dataStepsByInterval, by.x = "interval", by.y = "interval")
